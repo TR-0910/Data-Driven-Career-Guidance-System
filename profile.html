@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Profile | SkillBridge{% endblock %}
+{% block content %}
+<h1 class="h3">Your profile</h1>
+<p class="text-muted">Set a level for each skill you have. Intermediate and Advanced count as a full match, Beginner counts as half. Saving updates every match score.</p>
+<form method="post" class="vstack gap-4">
+  <section>
+    <h2 class="h5">About you</h2>
+    <div class="row g-3">
+      <div class="col-md-6"><label class="form-label" for="education">Education</label>
+        <input class="form-control" id="education" name="education" value="{{ user['education'] }}" placeholder="B.E. Computer Science (Data Science), 2nd year"></div>
+      <div class="col-md-6"><label class="form-label" for="interests">Career interests</label>
+        <input class="form-control" id="interests" name="interests" value="{{ user['interests'] }}" placeholder="machine learning, analytics, backend"></div>
+      <div class="col-md-6"><label class="form-label" for="projects">Projects</label>
+        <textarea class="form-control" id="projects" name="projects" rows="3">{{ user['projects'] }}</textarea></div>
+      <div class="col-md-6"><label class="form-label" for="certificates">Certificates</label>
+        <textarea class="form-control" id="certificates" name="certificates" rows="3">{{ user['certificates'] }}</textarea></div>
+    </div>
+  </section>
+  <section>
+    <h2 class="h5">Resume text</h2>
+    <p class="small text-muted mb-2">Paste your resume, then choose Find skills. Skills found are added at Intermediate; adjust them below.</p>
+    <textarea class="form-control mb-2" name="resume_text" rows="5">{{ user['resume_text'] }}</textarea>
+    <button class="btn btn-outline-primary btn-sm" name="extract" value="1">Find skills in resume and save</button>
+  </section>
+  <section>
+    <h2 class="h5">Skills</h2>
+    {% for cat, skills in groups.items() %}
+    <fieldset class="mb-3"><legend class="h6 text-muted">{{ cat }}</legend>
+      <div class="row g-2">
+      {% for s in skills %}
+        <div class="col-6 col-md-4 col-lg-3">
+          <label class="form-label small mb-1" for="s-{{ loop.index }}-{{ cat|replace(' ','') }}">{{ s }}</label>
+          <select class="form-select form-select-sm lv-{{ mine.get(s, 0) }}" id="s-{{ loop.index }}-{{ cat|replace(' ','') }}" name="skill::{{ s }}">
+            {% for v, label in levels.items() %}<option value="{{ v }}" {{ "selected" if mine.get(s, 0) == v }}>{{ label }}</option>{% endfor %}
+          </select>
+        </div>
+      {% endfor %}
+      </div>
+    </fieldset>
+    {% endfor %}
+  </section>
+  <div><button class="btn btn-primary">Save profile</button></div>
+</form>
+{% endblock %}

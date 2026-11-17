@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_macros.html" import segbar %}
+{% block title %}Jobs | SkillBridge{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-2">
+  <h1 class="h3 mb-0">Jobs ranked for you</h1>
+  <form class="d-flex gap-2" method="get">
+    <input class="form-control" name="q" value="{{ q }}" placeholder="Search title, company, city, skill" aria-label="Search jobs">
+    <button class="btn btn-outline-primary">Search</button>
+  </form>
+</div>
+<p class="small text-muted legend"><span class="dot seg-m"></span>matched <span class="dot seg-p"></span>partial <span class="dot seg-x"></span>missing</p>
+{% if not has_skills %}
+  <div class="empty"><p class="mb-2">Your profile has no skills yet, so we cannot rank jobs.</p><a class="btn btn-primary" href="{{ url_for('profile') }}">Add skills</a></div>
+{% else %}
+<ul class="rows">
+  {% for r in ranked %}
+  <li>
+    <div class="d-flex justify-content-between gap-3">
+      <div><a class="fw-semibold" href="{{ url_for('job', job_id=r.id) }}">{{ r.title }}</a>
+        <div class="small text-muted">{{ r.company }}, {{ r.location }}</div></div>
+      <div class="pct">{{ r.match_pct }}%</div>
+    </div>
+    {{ segbar(r.analysis) }}
+  </li>
+  {% else %}<li class="text-muted">No jobs match "{{ q }}". Try a broader search.</li>{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

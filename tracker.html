@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "_macros.html" import course_links %}
+{% block title %}Applications | SkillBridge{% endblock %}
+{% block content %}
+<h1 class="h3">Applications</h1>
+{% if not items %}
+  <div class="empty"><p class="mb-2">You have not saved or applied to any jobs yet.</p><a class="btn btn-primary" href="{{ url_for('jobs') }}">Browse jobs</a></div>
+{% else %}
+<ul class="rows">
+  {% for it in items %}
+  <li>
+    <form method="post" action="{{ url_for('update_application', app_id=it.id) }}" class="row g-2 align-items-center">
+      <div class="col-md-4"><a class="fw-semibold" href="{{ url_for('job', job_id=it.job_id) }}">{{ it.title }}</a>
+        <div class="small text-muted">{{ it.company }}, {{ it.location }}</div></div>
+      <div class="col-6 col-md-2"><label class="visually-hidden" for="st-{{ it.id }}">Status</label>
+        <select class="form-select form-select-sm" id="st-{{ it.id }}" name="status">
+          {% for s in statuses %}<option {{ "selected" if s == it.status }}>{{ s }}</option>{% endfor %}</select></div>
+      <div class="col-6 col-md-4"><label class="visually-hidden" for="nt-{{ it.id }}">Notes</label>
+        <input class="form-control form-control-sm" id="nt-{{ it.id }}" name="notes" value="{{ it.notes }}" placeholder="Notes"></div>
+      <div class="col-md-2"><button class="btn btn-sm btn-outline-primary">Update</button></div>
+    </form>
+    {% if it.status == "Rejected" %}
+    <div class="gapbox">
+      {% if it.analysis.missing or it.analysis.partial %}
+        <strong>Before you apply to similar roles, work on:</strong>
+        <ul class="mb-0">
+        {% for s in it.analysis.missing + it.analysis.partial %}<li>{{ s }}{% if s in it.analysis.partial %} (raise from Beginner){% endif %}: {{ course_links(s, courses) }}</li>{% endfor %}
+        </ul>
+      {% else %}You meet every listed skill. Consider strengthening projects and interview practice.{% endif %}
+    </div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

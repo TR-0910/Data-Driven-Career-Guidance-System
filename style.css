@@ -1,0 +1,30 @@
+:root{
+  --ink:#1b2733; --muted:#5d6b78; --paper:#f3f5f7; --line:#d9dfe5; --accent:#0f5c7a;
+  --m:#2f7d4f; --p:#c58a1b; --x:#b3413e;
+}
+body{font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+.text-muted{color:var(--muted)!important}
+a{color:var(--accent)}
+.sb-nav{background:#fff;border-bottom:1px solid var(--line)}
+.sb-nav .navbar-brand{font-weight:700;color:var(--accent);letter-spacing:-.01em}
+.btn-primary{--bs-btn-bg:var(--accent);--bs-btn-border-color:var(--accent);--bs-btn-hover-bg:#0b4a64;--bs-btn-hover-border-color:#0b4a64;--bs-btn-active-bg:#0b4a64}
+.btn-outline-primary{--bs-btn-color:var(--accent);--bs-btn-border-color:var(--accent);--bs-btn-hover-bg:var(--accent);--bs-btn-hover-border-color:var(--accent)}
+:focus-visible{outline:3px solid #7fb7cf;outline-offset:2px}
+.rows{list-style:none;padding:0;margin:0 0 1rem;border-top:1px solid var(--line)}
+.rows>li{padding:.9rem 0;border-bottom:1px solid var(--line)}
+.pct{font-size:1.35rem;font-weight:700;font-variant-numeric:tabular-nums}
+.pct-lg{font-size:2rem;text-align:right;line-height:1.1}
+/* signature element: composition of required skills */
+.segbar{display:flex;height:10px;margin:.5rem 0 .35rem;background:#e6eaee;border-radius:2px;overflow:hidden}
+.segbar span{display:block;height:100%}
+.seg-m{background:var(--m)} .seg-p{background:var(--p)} .seg-x{background:var(--x)}
+.legend .dot{display:inline-block;width:.7rem;height:.7rem;margin:0 .3rem 0 .8rem;border-radius:2px}
+.legend .dot:first-child{margin-left:0}
+.chip{display:inline-block;margin:0 .35rem .35rem 0;padding:.15rem .55rem;border-radius:3px;font-size:.85rem;border:1px solid}
+.chip-m{color:var(--m);border-color:var(--m)} .chip-p{color:#8a5f0f;border-color:var(--p)} .chip-x{color:var(--x);border-color:var(--x)}
+.chip small{opacity:.8}
+.prose{max-width:70ch}
+.empty{background:#fff;border:1px dashed var(--line);padding:1.5rem;border-radius:4px}
+.gapbox{margin-top:.6rem;padding:.7rem .9rem;background:#fff;border-left:3px solid var(--x);font-size:.92rem}
+select.lv-0{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.segbar span{transition:width .3s}}

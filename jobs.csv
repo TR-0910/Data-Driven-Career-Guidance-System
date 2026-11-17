@@ -1,0 +1,33 @@
+title,company,location,description,apply_url,source
+Data Analyst,Northwind Analytics,Bengaluru,"Turn raw business data into dashboards and weekly insight reports. Requirements: python, sql, excel, power bi, statistics, data visualization, communication.",,sample
+Junior Data Analyst,Brightpath Labs,Hyderabad,"Support the analytics team with queries, cleaning and reporting. Requirements: sql, excel, tableau, statistics, communication.",,sample
+Business Intelligence Developer,Kestrel Systems,Pune,"Design reports and data models for business stakeholders. Requirements: sql, power bi, etl, data warehousing, excel, data visualization.",,sample
+Data Scientist,Orbit Works,Chennai,"Build predictive models and communicate findings to product teams. Requirements: python, pandas, numpy, scikit-learn, machine learning, statistics, sql, data visualization.",,sample
+Machine Learning Engineer,Lumen Software,Remote,"Train, ship and monitor machine learning models in production. Requirements: python, machine learning, scikit-learn, tensorflow, pytorch, docker, git, rest api.",,sample
+Deep Learning Engineer,Harbor Data,Mumbai,"Develop neural network models for image and signal problems. Requirements: python, deep learning, pytorch, tensorflow, computer vision, numpy, linux.",,sample
+NLP Engineer,Vertex Digital,Bengaluru,"Build language models and text pipelines for search and chat products. Requirements: python, nlp, deep learning, pytorch, machine learning, git.",,sample
+Computer Vision Engineer,Pinecone Tech,Hyderabad,"Create detection and tracking systems from camera data. Requirements: python, computer vision, deep learning, pytorch, opencv, numpy.",,sample
+Data Engineer,Northwind Analytics,Pune,"Build reliable batch pipelines that feed analytics and ML teams. Requirements: python, sql, spark, airflow, etl, aws, data warehousing, git.",,sample
+Big Data Engineer,Brightpath Labs,Chennai,"Process large datasets on distributed clusters. Requirements: python, spark, hadoop, sql, linux, big data, aws.",,sample
+Python Developer,Kestrel Systems,Remote,"Write clean services and automation scripts in Python. Requirements: python, flask, rest api, sql, git, oop, data structures.",,sample
+Backend Developer (Flask),Orbit Works,Mumbai,"Own APIs and data models for a growing web product. Requirements: python, flask, mysql, rest api, docker, git.",,sample
+Backend Developer (Django),Lumen Software,Bengaluru,"Build secure, scalable web backends. Requirements: python, django, postgresql, rest api, docker, git, ci/cd.",,sample
+Java Backend Developer,Harbor Data,Hyderabad,"Develop microservices for a payments platform. Requirements: java, spring boot, mysql, rest api, git, oop.",,sample
+Full Stack Developer,Vertex Digital,Pune,"Ship features end to end, from database to browser. Requirements: javascript, react, node.js, mongodb, html, css, rest api, git.",,sample
+Full Stack Python Developer,Pinecone Tech,Chennai,"Build internal tools with a Python backend and a simple web frontend. Requirements: python, flask, javascript, html, css, bootstrap, sql, git.",,sample
+Frontend Developer,Northwind Analytics,Remote,"Build responsive, accessible interfaces. Requirements: html, css, javascript, react, typescript, git, figma.",,sample
+Web Developer Trainee,Brightpath Labs,Mumbai,"Learn on the job while building pages for client sites. Requirements: html, css, javascript, git, communication.",,sample
+DevOps Engineer,Kestrel Systems,Bengaluru,"Automate builds, deployments and infrastructure. Requirements: linux, docker, kubernetes, ci/cd, jenkins, aws, git.",,sample
+Cloud Engineer,Orbit Works,Hyderabad,"Run and secure cloud workloads. Requirements: aws, linux, networking, docker, python.",,sample
+Azure Cloud Associate,Lumen Software,Pune,"Support enterprise customers moving workloads to Azure. Requirements: azure, linux, networking, docker, python, communication.",,sample
+QA Automation Engineer,Harbor Data,Chennai,"Automate regression suites for web applications. Requirements: selenium, python, unit testing, jira, agile, git, ci/cd.",,sample
+Manual Test Engineer,Vertex Digital,Remote,"Plan and execute test cases for releases. Requirements: manual testing, jira, agile, sql, communication.",,sample
+Cybersecurity Analyst,Pinecone Tech,Mumbai,"Monitor alerts and investigate incidents. Requirements: cybersecurity, networking, linux, penetration testing, python.",,sample
+Security Engineer,Northwind Analytics,Bengaluru,"Harden applications and review designs for risk. Requirements: cybersecurity, cryptography, penetration testing, linux, networking.",,sample
+Android Developer,Brightpath Labs,Hyderabad,"Build and maintain a consumer Android app. Requirements: android, kotlin, java, rest api, git, oop.",,sample
+Flutter Developer,Kestrel Systems,Pune,"Build cross-platform mobile apps. Requirements: flutter, rest api, git, ui/ux design, oop.",,sample
+UI/UX Designer,Orbit Works,Chennai,"Design flows and prototypes for web and mobile products. Requirements: figma, ui/ux design, html, css, communication.",,sample
+Software Engineer,Lumen Software,Remote,"Solve general engineering problems across a product team. Requirements: data structures, algorithms, oop, java, python, sql, git, problem solving.",,sample
+Software Engineer (C++),Harbor Data,Mumbai,"Work on performance-critical systems software. Requirements: c++, data structures, algorithms, oop, linux, git.",,sample
+Business Analyst,Vertex Digital,Bengaluru,"Translate business needs into requirements and reports. Requirements: sql, excel, jira, agile, communication, power bi, problem solving.",,sample
+AI and Data Science Intern,Pinecone Tech,Hyderabad,"Learn applied machine learning on real projects. Requirements: python, pandas, numpy, machine learning, matplotlib, git.",,sample

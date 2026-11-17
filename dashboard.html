@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% from "_macros.html" import segbar, course_links %}
+{% block title %}Dashboard | SkillBridge{% endblock %}
+{% block content %}
+<h1 class="h3">Hello, {{ current_user['name'] }}</h1>
+{% if not has_skills %}
+  <div class="empty">
+    <p class="mb-2">Add your skills and we will rank jobs by how well you fit them.</p>
+    <a class="btn btn-primary" href="{{ url_for('profile') }}">Build your profile</a>
+  </div>
+{% else %}
+<div class="row g-4 mt-1">
+  <div class="col-lg-7">
+    <h2 class="h5">Your best matches</h2>
+    <ul class="rows">
+      {% for r in top %}
+      <li>
+        <div class="d-flex justify-content-between gap-3">
+          <div><a class="fw-semibold" href="{{ url_for('job', job_id=r.id) }}">{{ r.title }}</a>
+            <div class="small text-muted">{{ r.company }}, {{ r.location }}</div></div>
+          <div class="pct">{{ r.match_pct }}%</div>
+        </div>
+        {{ segbar(r.analysis) }}
+        <div class="small text-muted">
+          {% if r.analysis.missing %}Missing: {{ r.analysis.missing[:3]|join(", ") }}{% else %}You have every required skill.{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('jobs') }}">See all jobs</a>
+  </div>
+  <div class="col-lg-5">
+    <h2 class="h5">Learn next</h2>
+    <p class="small text-muted">Skills most often missing across your top 10 matches.</p>
+    <ul class="rows">
+      {% for skill, n in focus %}
+      <li><div class="d-flex justify-content-between"><span class="fw-semibold">{{ skill }}</span>
+        <span class="small text-muted">needed by {{ n }} of your top 10</span></div>
+        <div class="small">{{ course_links(skill, courses) }}</div></li>
+      {% else %}<li class="text-muted">Nothing missing in your top matches.</li>{% endfor %}
+    </ul>
+    <h2 class="h5 mt-4">Applications</h2>
+    <p class="mb-0">{% for s in statuses %}<span class="me-3">{{ s }} <strong>{{ counts.get(s, 0) }}</strong></span>{% endfor %}</p>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

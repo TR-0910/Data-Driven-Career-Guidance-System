@@ -1,0 +1,16 @@
+{% macro segbar(a) %}
+  {% set t = a.total or 1 %}
+  <div class="segbar" role="img" aria-label="{{ a.matched|length }} matched, {{ a.partial|length }} partial, {{ a.missing|length }} missing of {{ a.total }} required skills">
+    <span class="seg-m" style="width: {{ (a.matched|length / t * 100)|round(1) }}%"></span><span class="seg-p" style="width: {{ (a.partial|length / t * 100)|round(1) }}%"></span><span class="seg-x" style="width: {{ (a.missing|length / t * 100)|round(1) }}%"></span>
+  </div>
+{% endmacro %}
+
+{% macro chips(items, kind) %}
+  {% for s in items %}<span class="chip chip-{{ kind }}">{{ s }}</span>{% endfor %}
+{% endmacro %}
+
+{% macro course_links(skill, courses) %}
+  {% for c in courses.for_skill(skill) %}
+    <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer">{{ c.platform }}</a>{% if not loop.last %}, {% endif %}
+  {% endfor %}
+{% endmacro %}

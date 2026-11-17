@@ -1,0 +1,74 @@
+category,skill,aliases
+Programming,python,
+Programming,java,
+Programming,c++,cpp
+Programming,c programming,
+Programming,javascript,js
+Programming,typescript,
+Programming,kotlin,
+Programming,data structures,
+Programming,algorithms,
+Programming,oop,object-oriented;object oriented;object-oriented programming
+Web,html,html5
+Web,css,css3
+Web,react,reactjs;react.js
+Web,node.js,nodejs
+Web,flask,
+Web,django,
+Web,fastapi,
+Web,spring boot,springboot
+Web,bootstrap,
+Web,rest api,rest apis;restful;restful apis
+Databases,sql,structured query language
+Databases,mysql,
+Databases,postgresql,postgres
+Databases,mongodb,mongo
+Databases,sqlite,
+Data,pandas,
+Data,numpy,
+Data,statistics,statistical analysis
+Data,data visualization,data visualisation
+Data,matplotlib,
+Data,tableau,
+Data,power bi,powerbi
+Data,excel,ms excel;microsoft excel
+Data,etl,
+Data,data warehousing,data warehouse
+Data,big data,
+Data,spark,pyspark;apache spark
+Data,hadoop,
+Data,airflow,apache airflow
+ML and AI,machine learning,ml
+ML and AI,deep learning,
+ML and AI,nlp,natural language processing
+ML and AI,computer vision,
+ML and AI,scikit-learn,sklearn;scikit learn
+ML and AI,tensorflow,
+ML and AI,pytorch,
+ML and AI,keras,
+ML and AI,opencv,
+Cloud and DevOps,git,
+Cloud and DevOps,github,
+Cloud and DevOps,docker,
+Cloud and DevOps,kubernetes,k8s
+Cloud and DevOps,aws,amazon web services
+Cloud and DevOps,azure,microsoft azure
+Cloud and DevOps,gcp,google cloud
+Cloud and DevOps,linux,
+Cloud and DevOps,ci/cd,cicd;continuous integration
+Cloud and DevOps,jenkins,
+Cloud and DevOps,networking,computer networks
+Testing,unit testing,test automation;automated testing
+Testing,manual testing,
+Testing,selenium,
+Testing,jira,
+Testing,agile,scrum
+Security,cybersecurity,cyber security;information security
+Security,penetration testing,pentesting;ethical hacking
+Security,cryptography,
+Mobile,android,
+Mobile,flutter,
+Design,figma,
+Design,ui/ux design,ux design;ui design;ux;ui/ux
+Professional,communication,communication skills
+Professional,problem solving,problem-solving
